@@ -1,6 +1,9 @@
 # css-snippets
 ## Main Snippets
-Makes many changes and has most minor bugs/issues. Also seems to be more resource intensive, which is why I made a light version that has less changes and uses less system resources.
+Makes many changes and has most minor bugs/issues. Also seems to be more resource intensive.
 
 ## Light Snippets
 Minimal/QoL changes with couple minor bugs/issues, doesn't use much resources.
+
+## Feather Snippet
+Pretty much just QoL stuff like rounded context menu, no nitro promos, no gift button, aligned chatbox, and chatbox drawer. No extra resources are used.
