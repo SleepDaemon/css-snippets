@@ -25,11 +25,6 @@
     display: none;
 }
 
-:root {
-  /* You can change this blur to anything */
-  --glass-menu-bg-blur: 20px;
-}
-
 /* Rounded Context Menu */
 .menu_dc52c6 { 
     border-radius: 10px; 
@@ -50,9 +45,9 @@
 }
 
 /* ReivewDB improvements */
-textarea[placeholder*="Review @"] {
+/* textarea[placeholder*="Review @"] {
     background-color: #00000040;
-}
+} */
 
 /* Max out width for embed msglinks */
 [class^=embedFull] > [class^=gridContainer] {
@@ -103,24 +98,24 @@ textarea[placeholder*="Review @"] {
     margin: 0;
 }
 
-@import url("https://css.f53.dev/discord/AlignedChatBox.css"); 
-
-/* ----- Aligned Chatbox ----- */
+/* @import url("https://css.f53.dev/discord/AlignedChatBox.css");  */
+/* ----- Aligned Chatbox -----
+  Squares up chatbox with user control area */
 /* align edges of chatbox to sides */
-/* :is(main,section)[class^=chatContent] > form { padding: 0px;  } */
+:is(main,section)[class^=chatContent] > form { padding: 0px;  }
 
 /* align chatbox to bottom */
-/* :is(main,section)[class^=chatContent] > form > *:first-child { margin-bottom: 0px; } */
+:is(main,section)[class^=chatContent] > form > *:first-child { margin-bottom: 0px; }
 
 /* center chatbox contents, no border radius */
-/* :is(main,section)[class^=chatContent] > form > *:first-child > * {
+:is(main,section)[class^=chatContent] > form > *:first-child > * {
   padding-top: 4px;
   min-height: 49px;
   border-radius: 0px;
-} */
+}
 
 /* slowmode/typing indicator */
-/* :is(main,section)[class^=chatContent] > form > *:last-child[class^=typing] {
+:is(main,section)[class^=chatContent] > form > *:last-child[class^=typing] {
   top: -24px;
   right: 0px;
   margin-left: auto;
@@ -129,16 +124,16 @@ textarea[placeholder*="Review @"] {
   padding-right: 9px;
   border-top-left-radius: 8px;
   background-color: var(--channeltextarea-background);
-} */
+}
 
 /* Fix replies */
-/* main[class^=chatContent] > form > * > [class^=attachedBars] {
+main[class^=chatContent] > form > * > [class^=attachedBars] {
   min-height: unset !important;
   padding-bottom: 4px;
-} */
+}
 
 /* jump to present */
-/* [class^=jumpToPresentBar] {
+[class^=jumpToPresentBar] {
   left: 0;
   border-radius: 0px;
   border-top-right-radius: 8px;
@@ -149,7 +144,7 @@ textarea[placeholder*="Review @"] {
 [class^=jumpToPresentBar] > [class^=barButtonMain] {
   flex: 0 0 auto;
   display: none;
-} */
+}
 
 /* Chat textfield buttons (emoji, gif, etc) hidden in a drawer menu until hovered over - CSS snippet by DeadVoxels#3520 */
 .buttons_ce5b56 {
@@ -215,333 +210,70 @@ textarea[placeholder*="Review @"] {
     font-size: 0.7rem;
     content: " (" attr(href) ")";
     filter: grayscale(0.4);
-}
 
-
-
-/* @import url(//dablulite.github.io/css-snippets/UserReimagined/import.css); */
-.panels__58331 .avatar_f8541f {
-  border: 3px solid var(--background-tertiary);
-  margin-top: -15px;
-  transform: translateY(-2.5px);
-  background-color: var(--background-tertiary);
+/* @import url("https://dablulite.github.io/css-snippets/BetterTitlebar/import.css"); */
+/* Better Titlebar  */
+.wordmarkWindows__05c46 > svg {
+    width: 19px;
 }
-.container_ca50b9 {
-  flex-direction: column;
-  padding: 0;
-  height: fit-content;
-  background: var(--bg-overlay-app-frame,var(--background-tertiary)) !important;
-  margin-bottom: 0;
+.wordmarkWindows__05c46 path:not(:first-child) {
+    display: none;
 }
-.panels__58331 .avatarWrapper_ba5175 {
-  width: 100%;
-  margin: 0 !important;
-  padding: 4px;
-  box-sizing: border-box;
-  border-radius: 0;
-  cursor: pointer;
+.wordmarkWindows__05c46 path:first-child {
+    d: path("M23.0212 1.67671C21.3107 0.879656 19.5079 0.318797 17.6584 0C17.4062 0.461742 17.1749 0.934541 16.9708 1.4184C15.003 1.12145 12.9974 1.12145 11.0283 1.4184C10.819 0.934541 10.589 0.461744 10.3368 0.00546311C8.48074 0.324393 6.67795 0.885118 4.96746 1.68231C1.56727 6.77853 0.649666 11.7538 1.11108 16.652C3.10102 18.1418 5.3262 19.2743 7.69177 20C8.22338 19.2743 8.69519 18.4993 9.09812 17.691C8.32996 17.3997 7.58522 17.0424 6.87684 16.6135C7.06531 16.4762 7.24726 16.3387 7.42403 16.1847C11.5911 18.1749 16.408 18.1749 20.5763 16.1847C20.7531 16.3332 20.9351 16.4762 21.1171 16.6135C20.41 17.0369 19.6639 17.3997 18.897 17.691C19.3052 18.4993 19.7718 19.2689 20.3021 19.9945C22.6677 19.2689 24.8929 18.1364 26.8828 16.6466H26.8893C27.43 10.9731 25.9665 6.04728 23.0212 1.67671ZM9.68041 13.6383C8.39754 13.6383 7.34085 12.4453 7.34085 10.994C7.34085 9.54272 8.37155 8.34973 9.68041 8.34973C10.9893 8.34973 12.0395 9.54272 12.0187 10.994C12.0187 12.4453 10.9828 13.6383 9.68041 13.6383ZM18.3161 13.6383C17.0332 13.6383 15.9765 12.4453 15.9765 10.994C15.9765 9.54272 17.0124 8.34973 18.3161 8.34973C19.6184 8.34973 20.6751 9.54272 20.6543 10.994C20.6543 12.4453 19.6184 13.6383 18.3161 13.6383Z") !important;
+    scale: 2;
 }
-.panels__58331 .avatarWrapper_ba5175:hover {
-  background: var(--bg-overlay-hover,var(--background-modifier-hover));
+.wordmarkWindows__05c46 svg > g {
+    transform: translateY(-75%);
 }
-.panels__58331 .avatarWrapper_ba5175:hover .avatar_f8541f {
-  border-color: var(--background-accent);
-  background-color: var(--background-accent);
-}
-.panels__58331 .avatarWrapper_ba5175 .nameTag__0e320 {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: 100%;
-  cursor: pointer;
-}
-.container_ca50b9 > .flex_f5fbb7 {
-  width: 100%;
-  gap: 6px;
-  padding: 6px;
-  box-sizing: border-box;
-}
-.container_ca50b9 > .flex_f5fbb7 > button {
-  border-radius: 50px;
-  width: 100%;
-  padding: 6px 0;
-  height: fit-content;
-  --inversed-overlay: rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6));
-  background: var(--inversed-overlay,var(--background-primary));
-  transition: color .15s ease-out,background-color .15s ease-out;
-}
-.wrapper__0ed4a {
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--background-modifier-accent);
-  background: var(--bg-overlay-app-frame,var(--background-tertiary)) !important;
-}
-.container_d667ff {
-  border-bottom: none;
-  background: var(--bg-overlay-app-frame,var(--background-tertiary));
-}
-.wrapper__0ed4a:empty {
-  display: none;
-}
-.actionButtons_b58cbb > button,
-.actionButtons_b58cbb > div > button,
-.actionButtons_b58cbb > div > span > button {
-    border-radius: 50px;
-    width: 100%;
-    padding: 6px 0;
-    height: fit-content;
-    --inversed-overlay: rgb(var(--bg-overlay-color-inverse)/var(--bg-overlay-opacity-6));
-    background: var(--inversed-overlay,var(--background-primary)) !important;
-    transition: color .15s ease-out,background-color .15s ease-out;
-    max-height: 32px;
-}
-.actionButtons_b58cbb button:hover {
-  background: var(--bg-overlay-hover,var(--background-modifier-hover)) !important;
-}
-.actionButtons_b58cbb button:active {
-  background: var(--bg-overlay-active,var(--background-modifier-active)) !important;
-}
-.actionButtons_b58cbb > div {
-  display: flex;
-  width: 100%;
-}
-.actionButtons_b58cbb > div > span > span {
-  display: none;
-}
-.actionButtons_b58cbb > div > span {
-  background-color: transparent !important;
-}
-.actionButtons_b58cbb {
-    width: 100%;
-    gap: 6px;
-    padding: 0;
-    box-sizing: border-box;
+.wordmarkWindows__05c46 {
     display: flex;
+    gap: 6px;
+    align-items: center;
+    order: 1;
+    margin-right: auto;
+    color: var(--header-primary);
 }
-.subtext__8f869,
-.panelSubtextContainer_f28bed {
-  max-width: unset;
-  display: flex;
-  width: 100%;
+.wordmarkWindows__05c46::after {
+    content: "Discord";
+    display: flex;
+    width: fit-content;
+    font-size: 12px;
+    font-family: var(--font-display);
+    font-weight: 700;
 }
-.hoverRoll__041cb {
-    width: calc(100% - 32px);
+html:has(#activeColorway:not(:empty)) .wordmarkWindows__05c46::after,
+html:has(#activeColorwayCSS:not(:empty)) .wordmarkWindows__05c46::after{
+    content: "Colorways";
+    background-color: var(--background-primary);
+    padding: 2px 8px;
+    border-radius: 16px;
 }
-:is(.wrapper__0ed4a:not(:empty), #vc-spotify-player) + .container_ca50b9 .avatar_f8541f {
+.typeWindows__5fa63 {
     margin-top: 0;
-    transform: none;
+    padding: 4px;
+    height: fit-content;
 }
-.wrapper__0ed4a:not(:empty) {
-    padding: 0 !important;
-    background: none !important;
-    border-bottom: none !important;
+.typeWindows__5fa63 > .winButton__88672,
+.typeWindows__5fa63 > .wordmarkWindows__05c46 {
+    position: relative;
 }
-
-/* @import url(https://seele1306.github.io/Snippets/BetterProfiles/import.css); */
-/* [[ PROFILES ]] */
-.customStatus__3aa7f .customStatusEmoji__00639 {
-margin: 4px -12px 8px;
-position: relative;
-left: 50%;
-float: none;
-border-radius: 4px
+.winButton__88672 {
+    top: 0 !important;
+    margin: -4px 0;
+    height: 31px;
+    width: 46px;
 }
-.customStatus__3aa7f .customStatusEmoji__00639.customStatusSoloEmoji__24b58 {
-position: relative;
-left: 42.5%
+.winButtonClose__73489 {
+    margin-right: -4px;
 }
-.customStatus__3aa7f::before {
-content: "Current status";
-font-weight: 800;
-color: var(--text-muted);
-display: block
-}
-.customStatus__90402::before {
-content: "Current status";
-font-weight: 800;
-color: var(--text-muted);
-display: block
-}
-.defaultColor__77578.eyebrow_e5a66c.defaultColor__87d87.title_ef4a6d {
-justify-content: center;
-display: flex
-}
-.userPopoutInner_f545a3 {
-max-height: calc(100vh - 480px)
-}
-.pronouns__8bcdb,
-.pronouns_be950a {
-text-transform: none;
-color: var(--text-normal);
-font-size: 16px;
-font-weight: 800;
-padding: 4px 6px;
-margin: 4px 0 0 0;
-border-radius: 4px;
-max-width: 90%;
-overflow: hidden;
-background: linear-gradient(45deg, var(--profile-gradient-primary-color), var(--profile-gradient-secondary-color));
-background-size: 200% 200%
-}
-.profileBannerPremium__9ca8f {
-margin: 12px auto auto;
-width: calc(100% - 24px);
-height: calc(100px - 24px) !important;
-min-height: 188px !important;
-border-radius: 8px
-}
-.popoutBannerPremium__942db {
-margin: 8px auto auto;
-width: calc(100% - 16px) !important;
-height: calc(100px - 16px) !important;
-min-height: 106px !important;
-border-radius: 4px
-}
-.scroller__83262 {
-padding: 6px 12px
-}
-.section__6f61e>div:not(.roles__74a2b),
-.userInfoText__5f822 {
-padding: 8px
-}
-.scrollerSeparator__321f3 {
-box-shadow: none
-}
-.section__6f61e.usernameSection__53868 {
-margin-bottom: 8px
-}
-.container_b6b15b {
-margin: 0 12px;
-padding: 16px
-}
-.usernameSection__53868>div {
-width: calc(100% - 16px)
-}
-.container__22d2b>div {
-width: 100%
-}
-.section__6f61e>div:not(.activity__20c1e, .roles__74a2b),
-.memberSinceContainer__0a28b,
-.userInfoText__5f822,
-.container_b6b15b,
-.nameTag__7814f,
-img[class*=emoji_] {
-justify-content: center;
-text-align: center
-}
-.section__6f61e>div:not(.roles__74a2b), 
-.mutualGuildsList__6e961, 
-.mutualFriendsList__632b5,
-.container_b6b15b,
-.userInfoText__5f822 {
-background: var(--profile-body-background-color);
-border-radius: 4px
-}
-/* remove border in modal connections */
-.userInfoSection__1daf8+.userInfoSection__1daf8 {
-border-top: none
-}
-/* fix badge list height */
-.profileBadges__7a7cb.container__5bda1 {
-min-height: fit-content;
-margin-right: 10px
-}
-:is(.userPopoutInner_f545a3, .userInfoText__5f822) .blockquoteContainer_f24d1f {
-justify-content: center
-}
-.userPopoutInner_f545a3 .markup_a7e664 a,
-.userInfoText-2MFCmH.markup_a7e664 a,
-.timestamp_a65714 {
-background: var(--background-modifier-accent);
-color: var(--text-link);
-font-weight: bold;
-padding: 0 4px;
-border-radius: 4px
-}
-:is(.userPopoutInner_f545a3 .markup_a7e664 a, .userInfoText-2MFCmH.markup_a7e664 a, .timestamp_a65714):hover {
-background: var(--background-modifier-hover);
-text-decoration: none
-}
-.tabBarContainer__63f55 {
-margin: 20px 0 0
-}
-.tabBar__35f81 {
-display: flex;
-flex-flow: row wrap;
-justify-content: center;
-align-items: center;
-row-gap: 8px;
-column-gap: 8px;
-margin-bottom: 16px
-}
-.userProfileModalInner__7c87d .top__592a7 .item__48dda {
-border: none;
-background: color-mix(in srgb, var(--profile-body-background-color) 40%, transparent);
-padding: 2px 0;
-width: 31%;
-border-radius: 4px;
-text-align: center
-}
-.tabBarContainer__63f55,
-.top__592a7 .themed_b957e8.item__48dda:hover {
-border: none
-}
-.userProfileModalInner__7c87d .top__592a7 .item__48dda:hover {
-background: color-mix(in srgb, var(--profile-body-background-color) 70%, transparent) !important
-}
-.userProfileModalInner__7c87d .top__592a7 .selected__5711d.item__48dda {
-background: color-mix(in srgb, var(--profile-body-background-color) 100%, transparent)
-}
-.tabBarItem_b56b35 {
-height: fit-content
-}
-.divider_d66e63 {
-background: var(--profile-body-divider-color)
-}
-.platformIcon__05c5e {
-margin: 2px 2px
-}
-.scroller__5a651 {
-left: 12.5%
-}
-.userProfileOuterUnthemed__48723 .userPanelInner_eddf4c,
-.root_a28985:has(.userProfileModalOuter__3fe6b) {
-background: transparent !important
-}
-.profilePanel__12596 .userPanelInner_eddf4c {
-border-radius: 8px
-}
-.connectedAccountContainer__23f00 {
-border-width: 2px
-}
-.connectedAccountContainer__23f00:has(.connectedAccountOpenIcon_df549d:hover) {
-background: var(--profile-body-divider-color)
-}
-.flowerStarContainer_d8d14b.connectedAccountVerifiedIcon_db6dbd>svg>path {
-fill: var(--profile-body-divider-color);
-filter: brightness(1) contrast(2)
-}
-:is(.userPopoutInner_f545a3, .profilePanel__12596) [class*=divider_] {
-background: transparent;
-border-color: transparent
-}
-.userInfoSection__1daf8 .eyebrow_f53856:last-child, /* Notes in profile modal */
-.section__6f61e:has(.roles__74a2b:empty), /* no roles */
-[class*=userPanelInner_]::before,
-.lastSection__37b97, /* notes section */
-.aboutMeGuildIcon_b05b69 /* Profile guild icon */
-{
-display: none !important
-}
-:root {
-    --test-color: hsl(250, 45%, 45%);
-    --section-thickness: 1px; /* must be in pixels */
-    --profile-accent-color: 250deg 45% 45%;
-    --profile-transparency: 25%;
-    --profile-border-radius: 8px;
+.platform-win .container__4bde3 {
+    padding-top: 31px !important;
+    top: -31px !important;
 }
 
 /* @import url(//dablulite.github.io/css-snippets/DeclutterBar/import.css); */
-@import url("https://dablulite.github.io/css-snippets/BetterTitlebar/import.css");
+/* Top Bar declutter  */
 .container__11d72 {
     position: fixed;
     top: 0;
