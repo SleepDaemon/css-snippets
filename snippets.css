@@ -608,7 +608,8 @@ html:has(#activeColorwayCSS:not(:empty)) .wordmarkWindows__05c46::after{
     min-height: unset;
     width: 100vw;
     background: none !important;
-    padding-left: 0;
+    padding-left: 5px;
+    padding-top: 12px;
     box-shadow: none;
     padding-right: calc(46px*3);
     box-sizing: border-box;
@@ -636,7 +637,7 @@ html:has(#activeColorwayCSS:not(:empty)) .wordmarkWindows__05c46::after{
 .bg__12180,
 .platform-win .layer__2efaa {
     top: 0 !important;
-    padding-top: 0;
+    padding-top: 5px;
 }
 .children__32014:after,
 .tabBody_b3d268:before {
@@ -660,7 +661,7 @@ html:has(#activeColorwayCSS:not(:empty)) .wordmarkWindows__05c46::after{
 .search__07df0,
 .search_ac353c,
 .searchBar_e0c60b {
-    height: 31px;
+    height: 3rem;
     align-items: center;
 }
 .DraftEditor-root {
