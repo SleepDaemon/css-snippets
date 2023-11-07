@@ -333,6 +333,7 @@ main[class^=chatContent] > form > * > [class^=attachedBars] {
 
 /* @import url(//dablulite.github.io/css-snippets/DeclutterBar/import.css); */
 /* Top Bar declutter  */
+@import url("https://dablulite.github.io/css-snippets/BetterTitlebar/import.css");
 .container__11d72 {
     position: fixed;
     top: 0;
