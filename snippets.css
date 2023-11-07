@@ -1,3 +1,13 @@
+/*remove nitro promo  */
+.buttons_ce5b56>.button_afdfd9:first-child,
+.link__2e8e1[href="/store"],
+[class*="badgeContainer-"]:has([class*="bogoTrialBadge-"]),
+[class*="giftCodeContainer-"]:first-child,
+[aria-label="Customize your own profile theme, banner, animated avatar, and more with Nitro!"],
+.containerWithMargin__7d380 {
+  display: none;
+}
+
 /*rounded msg corner hover  */
 .message__80c10 {
     margin-left: 16px;
