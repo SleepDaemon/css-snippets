@@ -1,3 +1,15 @@
+/*rounded msg corner hover  */
+.message__80c10 {
+    margin-left: 16px;
+    border-radius: 10px;
+}
+
+.mentioned__58017:before {
+  width: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
 /* Remove Gift Button */
 .buttons_ce5b56 button:has([d^="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897"]) {
     display: none;
