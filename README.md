@@ -1,4 +1,3 @@
-# css-snippets
 ## Main Snippets
 Makes many changes and has most minor bugs/issues. Also seems to be more resource intensive.
 
