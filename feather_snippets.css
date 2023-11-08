@@ -1,3 +1,63 @@
+/* Chat textfield buttons (emoji, gif, etc) hidden in a drawer menu until hovered over - CSS snippet by DeadVoxels#3520 */
+.buttons_ce5b56 {
+    overflow: hidden;
+    position: absolute;
+    justify-content: flex-end;
+    background: rgba(23, 24, 26, 0.25);
+    border-radius: 8px;
+    transition: all 350ms;
+}
+.buttons_ce5b56:where(:not(:hover)){
+    max-width: 35px;
+    right: -0px;
+}
+.buttons_ce5b56::before {
+    opacity: 0%;
+    transition: opacity 150ms;
+    position: absolute;
+    top: 4px;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='352' height='42' x='80' y='96' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3Crect width='352' height='42' x='80' y='240' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3Crect width='352' height='42' x='80' y='384' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3C/svg%3E");
+    display: block;
+    object-fit: cover;
+    height: 44px;
+    width: 35px;
+}
+.buttons_ce5b56:where(:not(:hover))::before {
+    opacity: 100%;
+    transition: opacity 350ms;
+}
+.buttons_ce5b56:hover {
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 16px;
+    max-width: 100%;
+    right: 0px;
+    background: rgba(23, 24, 26, 0.5);
+    transition: all 150ms;
+}
+.buttons_ce5b56 > div, .buttons_ce5b56 > button {
+    transform: scaleX(0%) !important;
+    opacity: 0%;
+}
+.buttons_ce5b56:hover > div, .buttons_ce5b56:hover > button {
+    transform: scaleX(100%) !important;
+    opacity: 100%;
+}
+.buttons_ce5b56 > div:hover svg, .buttons_ce5b56 > button:hover svg {
+    height: 28px !important;
+    width: 28px !important;
+    margin-right: -2px;
+    margin-left: -2px;
+}
+.buttons_ce5b56 > div:nth-last-child(2):hover > button > div > div > svg {
+    margin-right: -4px;
+    margin-left: -4px;
+}
+.buttons_ce5b56 > div svg, .buttons_ce5b56 > button svg {
+    transition: all 0.3s;
+}
+
+
 /* Remove Gift Button */
 .buttons_ce5b56 button:has([d^="M16.886 7.999H20C21.104 7.999 22 8.896 22 9.999V11.999H2V9.999C2 8.896 2.897"]) {
     display: none;
@@ -74,65 +134,6 @@
 }
 [class*=markup-] li {
     margin: 0;
-}
-
-/* Chat textfield buttons (emoji, gif, etc) hidden in a drawer menu until hovered over - CSS snippet by DeadVoxels#3520 */
-.buttons_ce5b56 {
-    overflow: hidden;
-    position: absolute;
-    justify-content: flex-end;
-    background: rgba(23, 24, 26, 0.25);
-    border-radius: 8px;
-    transition: all 350ms;
-}
-.buttons_ce5b56:where(:not(:hover)){
-    max-width: 35px;
-    right: -0px;
-}
-.buttons_ce5b56::before {
-    opacity: 0%;
-    transition: opacity 150ms;
-    position: absolute;
-    top: 4px;
-    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='352' height='42' x='80' y='96' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3Crect width='352' height='42' x='80' y='240' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3Crect width='352' height='42' x='80' y='384' fill='rgb(181, 186, 193)' class='ci-primary'/%3E%3C/svg%3E");
-    display: block;
-    object-fit: cover;
-    height: 44px;
-    width: 35px;
-}
-.buttons_ce5b56:where(:not(:hover))::before {
-    opacity: 100%;
-    transition: opacity 350ms;
-}
-.buttons_ce5b56:hover {
-    padding-left: 5px;
-    padding-right: 5px;
-    border-radius: 16px;
-    max-width: 100%;
-    right: 0px;
-    background: rgba(23, 24, 26, 0.5);
-    transition: all 150ms;
-}
-.buttons_ce5b56 > div, .buttons_ce5b56 > button {
-    transform: scaleX(0%) !important;
-    opacity: 0%;
-}
-.buttons_ce5b56:hover > div, .buttons_ce5b56:hover > button {
-    transform: scaleX(100%) !important;
-    opacity: 100%;
-}
-.buttons_ce5b56 > div:hover svg, .buttons_ce5b56 > button:hover svg {
-    height: 28px !important;
-    width: 28px !important;
-    margin-right: -2px;
-    margin-left: -2px;
-}
-.buttons_ce5b56 > div:nth-last-child(2):hover > button > div > div > svg {
-    margin-right: -4px;
-    margin-left: -4px;
-}
-.buttons_ce5b56 > div svg, .buttons_ce5b56 > button svg {
-    transition: all 0.3s;
 }
 
 /* Show Markdown URL link location */
