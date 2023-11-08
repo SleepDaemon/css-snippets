@@ -142,48 +142,54 @@
     filter: grayscale(0.4);
 }
 
-/* @import url("https://css.f53.dev/discord/AlignedChatBox.css");  */
-/* ----- Aligned Chatbox -----
-  Squares up chatbox with user control area */
-/* align edges of chatbox to sides */
-:is(main,section)[class^=chatContent] > form { padding: 0px;  }
-
-/* align chatbox to bottom */
-:is(main,section)[class^=chatContent] > form > *:first-child { margin-bottom: 0px; }
-
-/* center chatbox contents, no border radius */
-:is(main,section)[class^=chatContent] > form > *:first-child > * {
-  padding-top: 4px;
-  min-height: 49px;
-  border-radius: 0px;
+/*Consistent Chatbox  */
+.wrapper_fbbb73 {
+  margin-bottom: 0;
+  border-radius: 0;
+  padding: 16.5px 0;
 }
-
-/* slowmode/typing indicator */
-:is(main,section)[class^=chatContent] > form > *:last-child[class^=typing] {
+.form__13a2c {
+  padding: 0;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+.channelTextArea__2e60f {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.base__512ed {
+  position: absolute;
+  width: calc(100% - 16px);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  box-sizing: border-box;
   top: -24px;
-  left: 0px;
-  margin-right: auto;
-  width: fit-content;
-  padding-left: 2px;
-  padding-right: 9px;
-  border-top-right-radius: 8px;
-  background-color: var(--channeltextarea-background);
-}
-
-/* Fix replies */
-main[class^=chatContent] > form > * > [class^=attachedBars] {
-  min-height: unset !important;
-  padding-bottom: 4px;
-}
-
-/* jump to present */
-[class^=jumpToPresentBar] {
   left: 0;
-  border-radius: 0px;
-  border-top-right-radius: 8px;
-  opacity: 1;
-  background-color: var(--channeltextarea-background);
-  right: unset;
+  background: var(--bg-overlay-chat,var(--background-primary));
+}
+.base__512ed > .cooldownWrapper_de448f {
+  margin: 0;
+  position: static;
+}
+.scroller__1f96e {
+  position: static;
+}
+.scrollableContainer__33e06 {
+  border-radius: 0;
+}
+.scrollableContainer__33e06 > .inner__9fd0b {
+  min-height: 53px;
+  align-items: center;
+}
+.attachWrapper__6354f {
+  display: flex;
+  position: static;
+  align-items: center;
+}
+.attachedBars_da3c74 {
+  border-radius: 0;
 }
 
 /*remove nitro promo  */
